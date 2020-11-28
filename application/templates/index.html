@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html  >
+<head>
+  <!-- Site made with Mobirise Website Builder v5.1.4, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.1.4, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="static/images/logo5.png" type="image/x-icon">
+  <meta name="description" content="">
+  
+  
+  <title>Radiation Prediction by DeepLearning</title>
+  <link rel="stylesheet" href="static/tether/tether.min.css">
+  <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="static/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="static/formstyler/jquery.formstyler.css">
+  <link rel="stylesheet" href="static/formstyler/jquery.formstyler.theme.css">
+  <link rel="stylesheet" href="static/datepicker/jquery.datetimepicker.min.css">
+  <link rel="stylesheet" href="static/socicon/css/styles.css">
+  <link rel="stylesheet" href="static/theme/css/style.css">
+  <link rel="preload" as="style" href="static/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="static/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
+  
+</head>
+<body>
+  
+  <section class="content1 cid-s48udlf8KU" id="content1-8">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-12 col-md-9">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Solar Radiation Prediction (By DeepLearning Model)</strong></h3>
+                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">Just imagine that you've got solar energy batteries and you want to know will it be reasonable to use them in future?<br>Please, INPUT Your Parameters to <strong>Predict the Solar Radiation&nbsp;</strong>&nbsp;</h4>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="form7 cid-sd8BVhAMRF" id="form7-m">
+    
+    
+    <div class="container-fluid">
+        <div class="mbr-section-head">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">INPUT&nbsp;</h3>
+            
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                <form action="/predict" method="POST" class="mbr-form form-with-styler mx-auto" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="n5aN6tu24SuJgT3ZWlKvGcmco1HI44RTjusQDkMsPrYXppypsn7Orx1SwFOzdmb5PMR7z6cDFVQ3B9XRyBhYaWlp43vqVj3MxtKs+bXv9XJ7S61p0HrZn2kPp+t1SOjD">
+                    
+                    <div class="">
+                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling
+                            out the form!</div>
+                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Oops...! some
+                            problem!</div>
+                    </div>
+                    <div class="dragArea row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="Temperature" data-validate="Temperature is required">
+                            <input type="number" step="any" name="Temperature" placeholder="Temperature" data-form-field="Temperature" class="form-control" required>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="Pressure" data-validate="Pressure is required">
+                            <input type="number" step="any" name="Pressure" placeholder="Pressure" data-form-field="Pressure" class="form-control" required>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="Humidity" data-validate="Humidity is required">
+                            <input type="number" step="any" name="Humidity" placeholder="Humidity" data-form-field="Humidity" class="form-control" required>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="WindDirection_D" data-validate="WindDirection_D is required">
+                            <input type="number" step="any" name="WindDirection_D" placeholder="WindDirection_D" data-form-field="WindDirection_D" class="form-control" required>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="Speed" data-validate="Speed is required">
+                            <input type="number" step="any" name="Speed" placeholder="Speed" data-form-field="Speed" class="form-control" required>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="DayOfYear" data-validate="DayOfYear is required">
+                            <input type="number" step="any" name="DayOfYear" placeholder="DayOfYear" data-form-field="DayOfYear" class="form-control" required>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="TimeOfDay_s" data-validate="TimeOfDay_s is required">
+                            <input type="number" step="any" name="TimeOfDay_s" placeholder="TimeOfDay_s" data-form-field="TimeOfDay_s" class="form-control" required>
+                        </div>
+                        <div class="col-auto mbr-section-btn align-center"><button type="submit" class="btn btn-primary display-4">Predicte</button></div>
+                    </div>
+                </form>
+                {% if radiation_amount %}
+                    <p style='text-align: center;margin-top: 15px;font-size: large;'>Solar Radiation Amount is: <b>{{ radiation_amount }}</b> (W/m^2).</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="footer3 cid-s48P1Icc8J" once="footers" id="footer3-i">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="row row-links">
+                <ul class="foot-menu">
+                    
+                    
+                    
+                    
+                    
+                <li class="foot-menu-item mbr-fonts-style display-7"></li><li class="foot-menu-item mbr-fonts-style display-7"></li><li class="foot-menu-item mbr-fonts-style display-7"></li></ul>
+            </div>
+            <div class="row social-row">
+                <div class="social-list align-right pb-2">
+                    
+                    
+                    
+                    
+                    
+                    
+                <div class="soc-item">
+                        <a href="https://twitter.com/Sebaie2" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-twitter socicon"></span>
+                        </a>
+                    </div><div class="soc-item">
+                        <a href="https://www.facebook.com/mohamed.sebaie2" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-facebook socicon"></span>
+                        </a>
+                    </div><div class="soc-item">
+                        <a href="https://www.linkedin.com/in/mohamed-sebaie-7768b4a7" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-linkedin socicon"></span>
+                        </a>
+                    </div><div class="soc-item">
+                        <a href="https://github.com/MohamedSebaie" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-github socicon"></span>
+                        </a>
+                    </div></div>
+            </div>
+            <div class="row row-copirayt">
+                <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">
+                    © Copyright 2020 M.SEBAIE. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+</section><section style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex;"><a href="https://mobirise.site/c" style="flex: 1 1; height: 3rem; padding-left: 1rem;"></a><p style="flex: 0 0 auto; margin:0; padding-right:1rem;"><a href="https://mobirise.site" style="color:#aaa;">https://mobirise.com</a> simple website maker</p></section><script src="static/web/static/jquery/jquery.min.js"></script>  <script src="static/popper/popper.min.js"></script>  <script src="static/tether/tether.min.js"></script>  <script src="static/bootstrap/js/bootstrap.min.js"></script>  <script src="static/smoothscroll/smooth-scroll.js"></script>  <script src="static/formstyler/jquery.formstyler.js"></script>  <script src="static/formstyler/jquery.formstyler.min.js"></script>  <script src="static/datepicker/jquery.datetimepicker.full.js"></script>  <script src="static/theme/js/script.js"></script>  <script src="static/formoid/formoid.min.js"></script>  
+  
+  
+</body>
+</html>
